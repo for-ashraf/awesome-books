@@ -1,4 +1,5 @@
 import { booksContainer, form } from './fields.js';
+
 class Books {
   constructor() {
     this.by = null;
@@ -51,4 +52,4 @@ class Books {
   }
 }
 
-export { Books };
+export default { Books };

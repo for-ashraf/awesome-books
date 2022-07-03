@@ -1,14 +1,10 @@
 import {
-  booksContainer, form, list, addNew, contact, bookList, addBook, contacts 
+  booksContainer, form, list, addNew, contact, bookList, addBook, contacts
 } from './modules/fields.js';
 
 import {
   Books
 } from './modules/book-class.js';
-
-import { 
-  DateTime 
-} from './modules/luxon.js';
 
 const book = new Books();
 book.showBooks();
@@ -44,4 +40,4 @@ booksContainer.addEventListener('click', (e) => {
 });
 
 /* Insert Date */
-document.getElementById('date').innerHTML = DateTime; 
+document.getElementById('date').innerHTML = DateTime;
