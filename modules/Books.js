@@ -1,6 +1,6 @@
 import { booksContainer, form } from './fields.js';
 
-export class Books {
+export default class Books {
   constructor() {
     this.by = null;
     this.books = [];
