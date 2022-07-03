@@ -1,6 +1,6 @@
 import {
   booksContainer, form, list, addNew, contact, bookList, addBook, contacts 
-  } from './modules/fields.js';
+} from './modules/fields.js';
 
 import {
   Books
