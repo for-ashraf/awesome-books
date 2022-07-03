@@ -2,13 +2,9 @@ import {
   booksContainer, form, list, addNew, contact, bookList, addBook, contacts,
 } from './modules/fields.js';
 
-import {
-  Books,
-} from './modules/Books.js';
+const Books = require('./modules/Books.js');
 
-import {
-  DateTime,
-} from './modules/luxon.min.js';
+const DateTime = require('./modules/luxon.min.js');
 
 const book = new Books();
 book.showBooks();
