@@ -6,6 +6,10 @@ import {
   Books
 } from './modules/book-class.js';
 
+import {
+  DateTime
+} from './modules/luxon.min.js';
+
 const book = new Books();
 book.showBooks();
 
