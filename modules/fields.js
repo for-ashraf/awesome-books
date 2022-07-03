@@ -7,5 +7,5 @@ const bookList = document.querySelector('#listbook');
 const addBook = document.querySelector('#addbook');
 const contacts = document.querySelector('#contacts');
 export {
-  booksContainer, form, list, addNew, contact, bookList, addBook, contacts
+  booksContainer, form, list, addNew, contact, bookList, addBook, contacts,
 };

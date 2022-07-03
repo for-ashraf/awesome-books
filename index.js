@@ -3,11 +3,11 @@ import {
 } from './modules/fields.js';
 
 import {
-  Books
+  Books,
 } from './modules/Books.js';
 
 import {
-  DateTime
+  DateTime,
 } from './modules/luxon.min.js';
 
 const book = new Books();
