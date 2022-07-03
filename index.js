@@ -1,10 +1,10 @@
 import {
-  booksContainer, form, list, addNew, contact, bookList, addBook, contacts
+  booksContainer, form, list, addNew, contact, bookList, addBook, contacts,
 } from './modules/fields.js';
 
 import {
   Books
-} from './modules/book-class.js';
+} from './modules/Books.js';
 
 import {
   DateTime
