@@ -1,4 +1,5 @@
-const { DateTime } =  require('./node_modules/luxon');
+const { DateTime } = require('./node_modules/luxon.js');
+
 const booksContainer = document.querySelector('.book-container');
 const form = document.querySelector('form');
 const list = document.querySelector('#book-list');
@@ -97,5 +98,4 @@ booksContainer.addEventListener('click', (e) => {
 
 // date
 
-const date = new Date();
-document.getElementById('date').innerHTML = date;
+document.getElementById('date').innerHTML = DateTime;
