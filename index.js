@@ -1,4 +1,4 @@
-const { DateTime } = require('./node_modules/luxon.js');
+import { DateTime } from 'luxon.js'
 
 const booksContainer = document.querySelector('.book-container');
 const form = document.querySelector('form');
