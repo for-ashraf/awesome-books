@@ -1,4 +1,11 @@
-import time from './modules/localDateTime.js';
+import { DateTime } from './luxon.js';
+
+DateTime = () => {
+const date = DateTime.now();
+const time = date.toLocaleString(DateTime.DATETIME_MED);
+
+return (time);
+}
 
 const booksContainer = document.querySelector('.book-container');
 const form = document.querySelector('form');
@@ -98,4 +105,4 @@ booksContainer.addEventListener('click', (e) => {
 
 // date
 
-document.getElementById('date').innerHTML = time;
+document.getElementById('date').innerHTML = DateTime();
