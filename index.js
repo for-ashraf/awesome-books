@@ -1,11 +1,5 @@
-import { DateTime } from './luxon.js';
-
-DateTime = () => {
-const date = DateTime.now();
-const time = date.toLocaleString(DateTime.DATETIME_MED);
-
-return (time);
-}
+import Books from './modules/book.js';
+import Timing from './modules/time.js';
 
 const booksContainer = document.querySelector('.book-container');
 const form = document.querySelector('form');
@@ -34,60 +28,6 @@ contacts.addEventListener('click', () => {
   contact.style.display = 'flex';
 });
 
-// Create book class, and methods
-
-class Books {
-  constructor() {
-    this.by = null;
-    this.books = [];
-  }
-
-  generateBook(book) {
-    this.by = 'by';
-    return `<div>
-        <ul>
-          <li>"${book.title}"</li>
-          <li>${this.by}</li>
-          <li>${book.author}</li> 
-        </ul>
-      <button>Remove</button>
-      </div>
-      `;
-  }
-
-  showBooks() {
-    const FromLocalStorage = JSON.parse(localStorage.getItem('books'));
-    if (FromLocalStorage) {
-      this.books = FromLocalStorage;
-      booksContainer.innerHTML = FromLocalStorage
-        .map((book) => this.generateBook(book))
-        .join('');
-    } else {
-      localStorage.setItem('books', JSON.stringify(this.books));
-      booksContainer.innerHTML = this.books.map((book) => this.generateBook(book)).join('');
-    }
-  }
-
-  updateBooks() {
-    const title = form.title.value.trim();
-    const author = form.author.value.trim();
-    if (title && author) {
-      this.books.push({ title, author });
-    }
-    localStorage.setItem('books', JSON.stringify(this.books));
-    this.showBooks();
-  }
-
-  removeBook(e) {
-    if (e.target.tagName === 'BUTTON') {
-      const title = e.target.parentElement.firstElementChild.firstElementChild.textContent;
-      this.books = this.books.filter((obj) => obj.title !== title.slice(1, title.length - 1));
-      localStorage.setItem('books', JSON.stringify(this.books));
-      this.showBooks();
-    }
-  }
-}
-
 const book = new Books();
 book.showBooks();
 
@@ -97,12 +37,12 @@ form.addEventListener('submit', (e) => {
   form.reset();
 });
 
-// delete book
-
 booksContainer.addEventListener('click', (e) => {
   book.removeBook(e);
 });
 
 // date
 
-document.getElementById('date').innerHTML = DateTime();
+window.addEventListener('load', () => {
+  Timing();
+});
